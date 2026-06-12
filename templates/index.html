@@ -25,6 +25,7 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Playfair Display', 'serif'],
+                        elegant: ['Cormorant Garamond', 'serif'],
                     },
                 }
             }
@@ -35,40 +36,48 @@
             .transition-custom { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
             .text-shadow { text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
             .logo-text {
-                font-family: 'Inter', sans-serif;
+                font-family: 'Cormorant Garamond', serif;
                 font-weight: 300;
-                letter-spacing: 0.25em;
-                line-height: 1.2;
+                letter-spacing: 0.35em;
+                line-height: 1.1;
+                text-transform: uppercase;
+            }
+            .nav-text {
+                font-family: 'Cormorant Garamond', serif;
+                font-weight: 400;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
             }
             .border-gold-line {
                 width: 80px;
-                height: 2px;
+                height: 1.5px;
                 background-color: #B89B68;
+                margin: 4px auto;
             }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-black font-sans">
 
-<!-- Navigation — FULL BLACK BACKGROUND -->
-<nav class="w-full bg-black px-8 md:px-16 py-6 flex justify-between items-center fixed top-0 left-0 z-50 shadow-md">
-    <!-- Custom Logo exactly like your image -->
-    <a href="#" class="flex flex-col items-center">
-        <span class="logo-text text-[clamp(1.8rem,4vw,2.5rem)] text-white font-light tracking-[0.3em]">LAZENDA</span>
-        <span class="w-[80%] h-[1px] bg-gold my-1"></span>
-        <span class="text-[0.6rem] uppercase text-gold tracking-[0.4em]">DEVELOPMENT</span>
+<!-- Navigation — FULL BLACK BACKGROUND + ELEGANT FONT -->
+<nav class="w-full bg-black px-8 md:px-16 py-5 flex justify-between items-center fixed top-0 left-0 z-50 shadow-md">
+    <!-- Premium Elegant Logo -->
+    <a href="#" class="flex flex-col items-start">
+        <span class="logo-text text-[clamp(2rem,4.5vw,2.8rem)] text-white">LAZENDA</span>
+        <span class="w-[90%] border-gold-line"></span>
+        <span class="text-[0.65rem] uppercase text-gold tracking-[0.4em] font-light">DEVELOPMENT</span>
     </a>
 
-    <div class="flex items-center gap-8">
-        <a href="#home" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">HOME</a>
-        <a href="#project" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Our Project</a>
-        <a href="#product" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Our Product</a>
-        <a href="#service" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Our Service</a>
-        <a href="#team" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Management Team</a>
-        <button class="text-white text-lg hover:text-gold transition-custom"><i class="fa fa-bars"></i></button>
+    <div class="flex items-center gap-10">
+        <a href="#home" class="nav-text text-base text-white/90 hover:text-gold transition-custom">HOME</a>
+        <a href="#project" class="nav-text text-base text-white/90 hover:text-gold transition-custom">OUR PROJECT</a>
+        <a href="#product" class="nav-text text-base text-white/90 hover:text-gold transition-custom">OUR PRODUCT</a>
+        <a href="#service" class="nav-text text-base text-white/90 hover:text-gold transition-custom">OUR SERVICE</a>
+        <a href="#team" class="nav-text text-base text-white/90 hover:text-gold transition-custom">MANAGEMENT TEAM</a>
+        <button class="text-white text-xl hover:text-gold transition-custom"><i class="fa fa-bars"></i></button>
     </div>
 </nav>
 
@@ -78,20 +87,20 @@
          alt="Luxury Modern Villa" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="absolute bottom-20 left-16 md:left-24 text-white">
-        <h1 class="text-[clamp(2.2rem,5vw,4rem)] font-display font-medium leading-tight text-shadow mb-4">
+        <h1 class="text-[clamp(2.2rem,5vw,4rem)] font-elegant font-medium leading-tight text-shadow mb-4 uppercase tracking-wider">
             LAZENDA DEVELOPMENT SDN. BHD.
         </h1>
-        <p class="text-lg md:text-xl text-white/90 mb-6">CIDB Registered Contractor • G7 • WILAYAH PERSEKUTUAN LABUAN</p>
-        <p class="text-gold text-lg font-medium">Bright, Trusted & Compliant — CIDB Registered</p>
+        <p class="text-lg md:text-xl text-white/90 mb-6 font-light">CIDB Registered Contractor • G7 • WILAYAH PERSEKUTUAN LABUAN</p>
+        <p class="text-gold text-lg font-elegant font-medium">Bright, Trusted & Compliant — CIDB Registered</p>
     </div>
 </section>
 
 <!-- About Us • Tentang Kami -->
 <section class="py-28 px-8 md:px-16 bg-white">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-6 relative">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-6 relative uppercase tracking-wider">
             About Us • Tentang Kami
-            <span class="absolute -bottom-4 left-0 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-0 border-gold-line w-20"></span>
         </h2>
         <p class="text-gray-800/80 leading-relaxed mb-6">
             LAZENDA DEVELOPMENT SDN. BHD. is a WILAYAH PERSEKUTUAN LABUAN–based contractor registered with CIDB since 1997, holding active certification. We deliver reliable building, civil engineering, and mechanical & electrical solutions—combining proven site experience with quality workmanship and compliance to Malaysian standards.
@@ -102,15 +111,15 @@
 
         <div class="grid md:grid-cols-3 gap-8 mt-12 text-center">
             <div class="p-6 border border-gray-200">
-                <div class="text-3xl font-display font-bold text-gold mb-2">0</div>
+                <div class="text-3xl font-elegant font-bold text-gold mb-2">0</div>
                 <div class="text-sm uppercase tracking-wider">Projects</div>
             </div>
             <div class="p-6 border border-gray-200">
-                <div class="text-3xl font-display font-bold text-gold mb-2">0</div>
+                <div class="text-3xl font-elegant font-bold text-gold mb-2">0</div>
                 <div class="text-sm uppercase tracking-wider">Products</div>
             </div>
             <div class="p-6 border border-gray-200">
-                <div class="text-3xl font-display font-bold text-gold mb-2">1997</div>
+                <div class="text-3xl font-elegant font-bold text-gold mb-2">1997</div>
                 <div class="text-sm uppercase tracking-wider">Established Member</div>
             </div>
         </div>
@@ -120,9 +129,9 @@
 <!-- CIDB Credentials • Butiran CIDB -->
 <section class="py-28 px-8 md:px-16 bg-gray-100">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-10 relative">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-10 relative uppercase tracking-wider">
             CIDB Credentials • Butiran CIDB
-            <span class="absolute -bottom-4 left-0 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-0 border-gold-line w-20"></span>
         </h2>
 
         <div class="bg-white shadow-lg p-8 mb-8">
@@ -171,14 +180,14 @@
 <!-- Category & Specializations • Kategori & Pengkhususan -->
 <section class="py-28 px-8 md:px-16 bg-white">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-16 relative">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-16 relative uppercase tracking-wider">
             Category & Specializations • Kategori & Pengkhususan
-            <span class="absolute -bottom-4 left-0 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-0 border-gold-line w-20"></span>
         </h2>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div class="p-6 border border-gray-200 hover:border-gold transition-custom">
-                <h3 class="text-xl font-display font-medium mb-4">🏢 Building (B)</h3>
+                <h3 class="text-xl font-elegant font-medium mb-4">🏢 Building (B)</h3>
                 <ul class="space-y-1 text-sm text-gray-700">
                     <li>B04 — Kerja-kerja pembinaan bangunan</li>
                     <li>B12 — Kerja pemasangan kaca</li>
@@ -190,15 +199,15 @@
                 </ul>
             </div>
             <div class="p-6 border border-gray-200 hover:border-gold transition-custom">
-                <h3 class="text-xl font-display font-medium mb-4">🛣️ Civil Engineering (CE)</h3>
+                <h3 class="text-xl font-elegant font-medium mb-4">🛣️ Civil Engineering (CE)</h3>
                 <p class="text-sm text-gray-700">Roads, drainage, site development & infrastructure works</p>
             </div>
             <div class="p-6 border border-gray-200 hover:border-gold transition-custom">
-                <h3 class="text-xl font-display font-medium mb-4">⚙️ Mechanical & Electrical (ME)</h3>
+                <h3 class="text-xl font-elegant font-medium mb-4">⚙️ Mechanical & Electrical (ME)</h3>
                 <p class="text-sm text-gray-700">Electrical wiring, mechanical systems, installation & maintenance</p>
             </div>
             <div class="p-6 border border-gray-200 hover:border-gold transition-custom">
-                <h3 class="text-xl font-display font-medium mb-4">🏭 Facility Management (F)</h3>
+                <h3 class="text-xl font-elegant font-medium mb-4">🏭 Facility Management (F)</h3>
                 <p class="text-sm text-gray-700">Maintenance, repair & facility upkeep services</p>
             </div>
         </div>
@@ -210,9 +219,9 @@
 <!-- Our Project -->
 <section id="project" class="py-20 px-8 md:px-16 bg-gray-100">
     <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-6 relative inline-block">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-6 relative inline-block uppercase tracking-wider">
             Past Projects • Projek Terdahulu
-            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line w-20"></span>
         </h2>
         <p class="text-gray-600 italic mt-8">No Data/Record Found</p>
     </div>
@@ -221,9 +230,9 @@
 <!-- Our Product -->
 <section id="product" class="py-20 px-8 md:px-16 bg-white">
     <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-6 relative inline-block">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-6 relative inline-block uppercase tracking-wider">
             Products Supply • Bekalan Produk
-            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line w-20"></span>
         </h2>
         <p class="text-gray-600 italic mt-8">No Data/Record Found</p>
     </div>
@@ -232,9 +241,9 @@
 <!-- Our Service -->
 <section id="service" class="py-20 px-8 md:px-16 bg-gray-100">
     <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-6 relative inline-block">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-6 relative inline-block uppercase tracking-wider">
             Services • Servis
-            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line w-20"></span>
         </h2>
         <p class="text-gray-600 italic mt-8">No Data/Record Found</p>
     </div>
@@ -243,9 +252,9 @@
 <!-- Management Team -->
 <section id="team" class="py-20 px-8 md:px-16 bg-white">
     <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-6 relative inline-block">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-6 relative inline-block uppercase tracking-wider">
             Management Team • Pasukan Pengurusan
-            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 border-gold-line w-20"></span>
         </h2>
         <p class="text-gray-600 italic mt-8">No Data/Record Found</p>
     </div>
@@ -254,9 +263,9 @@
 <!-- Contact Us • Hubungi Kami -->
 <section class="py-28 px-8 md:px-16 bg-black text-white">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-10 relative">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-elegant font-normal mb-10 relative uppercase tracking-wider">
             Contact Us • Hubungi Kami
-            <span class="absolute -bottom-4 left-0 border-gold-line"></span>
+            <span class="absolute -bottom-4 left-0 border-gold-line w-20"></span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-12">
