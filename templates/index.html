@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAZENDA DEVELOPMENT SDN. BHD. | CIDB G7 Contractor</title>
+    <title>LAZENDA DEVELOPMENT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,16 +11,19 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            dark: '#0A0A0A',
-                            gold: '#B89B68',
-                            light: '#F8F7F5',
-                            gray: '#2B2B2B',
-                            primary: '#003366',
-                        },
+                        black: '#000000',
+                        white: '#FFFFFF',
+                        neutral: {
+                            50: '#FAFAFA',
+                            100: '#F5F5F5',
+                            200: '#E5E5E5',
+                            300: '#D4D4D4',
+                            700: '#404040',
+                            900: '#171717',
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
                     },
                 }
@@ -29,308 +32,147 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow-sm { text-shadow: 1px 2px 4px rgba(0,0,0,0.35); }
-            .scroll-smooth { scroll-behavior: smooth; }
-            .transition-custom { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+            .transition-custom { transition: all 0.3s ease; }
+            .content-auto { content-visibility: auto; }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-brand-light text-brand-dark scroll-smooth">
+<body class="bg-white text-neutral-900 font-sans">
 
 <!-- Navigation -->
-<nav class="fixed w-full top-0 z-50 bg-brand-primary/95 backdrop-blur-md transition-custom" id="navbar">
-    <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-        <a href="#" class="flex items-center gap-3">
-            <span class="text-[clamp(1.4rem,3vw,2rem)] font-serif font-bold text-white tracking-widest">LAZENDA</span>
-            <span class="text-brand-gold text-sm uppercase tracking-[0.3em]">Development</span>
-        </a>
-        <div class="hidden md:flex gap-8">
-            <a href="#home" class="text-white/90 hover:text-brand-gold transition-custom font-medium">Home</a>
-            <a href="#about" class="text-white/90 hover:text-brand-gold transition-custom font-medium">About Us</a>
-            <a href="#services" class="text-white/90 hover:text-brand-gold transition-custom font-medium">Services</a>
-            <a href="#credentials" class="text-white/90 hover:text-brand-gold transition-custom font-medium">CIDB Info</a>
-            <a href="#contact" class="text-white/90 hover:text-brand-gold transition-custom font-medium">Contact</a>
-        </div>
-        <button class="md:hidden text-white text-2xl" id="menuToggle">
-            <i class="fa fa-bars"></i>
-        </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="md:hidden hidden bg-brand-primary/98" id="mobileMenu">
-        <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
-            <a href="#home" class="text-white/90 hover:text-brand-gold py-2">Home</a>
-            <a href="#about" class="text-white/90 hover:text-brand-gold py-2">About Us</a>
-            <a href="#services" class="text-white/90 hover:text-brand-gold py-2">Services</a>
-            <a href="#credentials" class="text-white/90 hover:text-brand-gold py-2">CIDB Info</a>
-            <a href="#contact" class="text-white/90 hover:text-brand-gold py-2">Contact</a>
-        </div>
+<nav class="absolute w-full top-0 left-0 z-50 px-6 md:px-12 py-6 flex justify-between items-center">
+    <a href="#" class="text-[clamp(1.5rem,3vw,2rem)] font-serif font-semibold tracking-widest text-black">LAZENDA<br><span class="text-[0.65rem] uppercase tracking-[0.3em] text-neutral-700">DEVELOPMENT</span></a>
+    <div class="flex items-center gap-8">
+        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Home</a>
+        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Projects</a>
+        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">About</a>
+        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Contact</a>
+        <button class="text-lg"><i class="fa fa-bars"></i></button>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-             alt="Construction & Development" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-brand-dark/70"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10 text-center">
-        <h1 class="text-[clamp(2.2rem,5vw,4rem)] font-serif font-bold text-white text-shadow-sm mb-4 tracking-wide">
-            LAZENDA DEVELOPMENT SDN. BHD.
+<section class="w-full h-screen relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+         alt="Luxury Modern Villa" class="w-full h-full object-cover">
+    <div class="absolute bottom-16 left-12 text-white">
+        <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-serif font-semibold leading-tight text-shadow-sm">
+            Timeless Living<br>Spaces
         </h1>
-        <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/85 max-w-2xl mx-auto mb-4">
-            Bright, Trusted & Compliant • CIDB Registered Contractor
-        </p>
-        <p class="text-white/80 mb-8">G7 Grade • Established 1997 • Wilayah Persekutuan Labuan</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#services" class="bg-brand-gold hover:bg-[#a88a56] text-white px-8 py-3.5 rounded-sm uppercase tracking-[0.15em] text-sm font-semibold transition-custom">
-                Our Services
-            </a>
-            <a href="#credentials" class="border-2 border-white/80 hover:border-brand-gold hover:text-brand-gold text-white px-8 py-3.5 rounded-sm uppercase tracking-[0.15em] text-sm font-semibold transition-custom">
-                CIDB Credentials
-            </a>
-        </div>
-    </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
-        <i class="fa fa-chevron-down text-lg"></i>
     </div>
 </section>
 
-<!-- About Us -->
-<section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="grid md:grid-cols-2 gap-14 items-center">
-            <div>
-                <span class="text-brand-gold uppercase tracking-[0.2em] text-sm font-medium">About Us • Tentang Kami</span>
-                <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-serif font-semibold mt-2 mb-5">End‑to‑End Construction Solutions</h2>
-                
-                <div class="mb-6">
-                    <p class="text-brand-gray/80 leading-relaxed mb-3">
-                        <strong>English:</strong> LAZENDA DEVELOPMENT SDN. BHD. is a Wilayah Persekutuan Labuan–based contractor registered with CIDB since 15 October 1997, holding active G7 grade certification. We deliver reliable building, civil engineering, and mechanical & electrical solutions — combining proven site experience with quality workmanship and compliance to Malaysian standards.
-                    </p>
-                    <p class="text-brand-gray/80 leading-relaxed italic">
-                        <strong>Bahasa Melayu:</strong> LAZENDA DEVELOPMENT SDN. BHD. adalah kontraktor berdaftar CIDB sejak 15 Oktober 1997, gred G7. Kami menyediakan perkhidmatan pembinaan, kejuruteraan awam, mekanikal & elektrik — berkualiti, selamat dan mematuhi piawaian Malaysia.
-                    </p>
-                </div>
-
-                <p class="text-brand-gray/80 leading-relaxed mb-6">
-                    We focus on safe delivery, transparent communication, and neat workmanship — suitable for residential, commercial, and light civil projects across Labuan and nearby regions.
+<!-- Property Developments Section -->
+<section class="py-24 px-6 md:px-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-serif font-medium mb-16">Property Developments</h2>
+        
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <h3 class="text-[clamp(1.4rem,3vw,2rem)] font-serif font-medium mb-6">Modern Luxury Residences</h3>
+                <p class="text-neutral-700 leading-relaxed mb-8 max-w-xl">
+                    Exquisitely designed homes blending contemporary architecture with natural surroundings. Each residence features premium finishes, open-plan living, and expansive outdoor areas.
                 </p>
-                <a href="#contact" class="inline-block border-b-2 border-brand-gold text-brand-dark hover:text-brand-gold font-medium transition-custom">Contact Us</a>
+                <a href="#" class="inline-block border border-neutral-900 px-8 py-3 text-sm uppercase tracking-widest hover:bg-neutral-900 hover:text-white transition-custom">
+                    View Projects
+                </a>
             </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Site" class="w-full h-[420px] object-cover shadow-xl">
-                <div class="absolute -bottom-6 -left-6 bg-brand-primary text-white p-5 shadow-lg">
-                    <span class="block text-3xl font-serif font-bold">1997</span>
-                    <span class="text-white/75 text-sm">Established Member</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CIDB Credentials -->
-<section id="credentials" class="py-20 bg-brand-light">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="text-center max-w-xl mx-auto mb-16">
-            <span class="text-brand-gold uppercase tracking-[0.2em] text-sm font-medium">CIDB Credentials • Butiran CIDB</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-serif font-semibold mt-2">Registered & Certified</h2>
-        </div>
-
-        <div class="bg-white shadow-xl p-8 max-w-3xl mx-auto">
-            <table class="w-full text-left">
-                <tr class="border-b border-gray-200">
-                    <td class="py-3 font-semibold text-brand-primary">PPK Registration No</td>
-                    <td class="py-3">1971017-LB043916</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                    <td class="py-3 font-semibold text-brand-primary">Membership Since</td>
-                    <td class="py-3">15/10/1997</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                    <td class="py-3 font-semibold text-brand-primary">Registration Validity</td>
-                    <td class="py-3">Until 24/10/2028</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                    <td class="py-3 font-semibold text-brand-primary">Certificates</td>
-                    <td class="py-3">PPK ✓</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                    <td class="py-3 font-semibold text-brand-primary">Grade</td>
-                    <td class="py-3 font-bold text-brand-gold">G7 (Unlimited Project Value)</td>
-                </tr>
-                <tr>
-                    <td class="py-3 font-semibold text-brand-primary">Compliance</td>
-                    <td class="py-3">IBS & QA Practices</td>
-                </tr>
-            </table>
-            <p class="text-sm text-gray-500 mt-4">*Verification available upon request. Info based on CIDB contractor registration records.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Services & Specializations -->
-<section id="services" class="py-20 bg-brand-dark text-white">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="text-center max-w-xl mx-auto mb-16">
-            <span class="text-brand-gold uppercase tracking-[0.2em] text-sm font-medium">Category & Specializations</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-serif font-semibold mt-2">Our Expertise</h2>
-            <p class="text-white/70 mt-2">Grade G7 — Eligible for all project values, no limit</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Building Works -->
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-brand-gold transition-custom">
-                <h3 class="text-xl font-serif font-semibold text-brand-gold mb-4">🏢 Building (B)</h3>
-                <ul class="space-y-2 text-white/80 text-sm">
-                    <li>• B04 — General building construction</li>
-                    <li>• B12 — Glass installation</li>
-                    <li>• B13 — Tile laying</li>
-                    <li>• B14 — Painting works</li>
-                    <li>• B15 — Roofing works</li>
-                    <li>• B18 — Metal works</li>
-                    <li>• B21 — Scaffolding</li>
-                </ul>
-            </div>
-
-            <!-- Civil Engineering -->
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-brand-gold transition-custom">
-                <h3 class="text-xl font-serif font-semibold text-brand-gold mb-4">🛣️ Civil Engineering (CE)</h3>
-                <ul class="space-y-2 text-white/80 text-sm">
-                    <li>• Road & drainage works</li>
-                    <li>• Site development & earthworks</li>
-                    <li>• Structural & foundation works</li>
-                    <li>• Infrastructure development</li>
-                </ul>
-            </div>
-
-            <!-- Mechanical & Electrical -->
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-brand-gold transition-custom">
-                <h3 class="text-xl font-serif font-semibold text-brand-gold mb-4">⚙️ Mechanical & Electrical (ME)</h3>
-                <ul class="space-y-2 text-white/80 text-sm">
-                    <li>• Electrical wiring & installation</li>
-                    <li>• Mechanical systems setup</li>
-                    <li>• M&E maintenance & testing</li>
-                    <li>• Power & lighting systems</li>
-                </ul>
-            </div>
-
-            <!-- Facility Management -->
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-brand-gold transition-custom">
-                <h3 class="text-xl font-serif font-semibold text-brand-gold mb-4">🏭 Facility Management (F)</h3>
-                <ul class="space-y-2 text-white/80 text-sm">
-                    <li>• Building maintenance & repair</li>
-                    <li>• Facility upkeep</li>
-                    <li>• Preventive maintenance programs</li>
-                    <li>• Renovation & upgrades</li>
-                </ul>
+            <div class="order-1 md:order-2">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Residence Interior" class="w-full h-auto shadow-lg">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="text-brand-gold uppercase tracking-[0.2em] text-sm font-medium">Contact Us • Hubungi Kami</span>
-            <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-serif font-semibold mt-2 mb-10">Get In Touch</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fa fa-map-marker text-brand-gold text-xl mt-1"></i>
-                        <div>
-                            <p class="font-semibold text-brand-primary">Registered Address</p>
-                            <p class="text-sm text-brand-gray/80">Wilayah Persekutuan Labuan, Malaysia</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fa fa-building text-brand-gold text-xl mt-1"></i>
-                        <div>
-                            <p class="font-semibold text-brand-primary">Service Area</p>
-                            <p class="text-sm text-brand-gray/80">Wilayah Persekutuan Labuan & surrounding regions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fa fa-phone text-brand-gold text-xl mt-1"></i>
-                        <div>
-                            <p class="font-semibold text-brand-primary">Telephone</p>
-                            <p class="text-sm text-brand-gray/80">[Insert Phone Number]</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fa fa-envelope text-brand-gold text-xl mt-1"></i>
-                        <div>
-                            <p class="font-semibold text-brand-primary">Email</p>
-                            <p class="text-sm text-brand-gray/80">info@lazendadev.com</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fa fa-whatsapp text-brand-gold text-xl mt-1"></i>
-                        <div>
-                            <p class="font-semibold text-brand-primary">WhatsApp</p>
-                            <p class="text-sm text-brand-gray/80">+60 11-6567 6997</p>
-                        </div>
-                    </div>
-                </div>
+<!-- Hotels & Resorts Section -->
+<section class="py-24 px-6 md:px-12 bg-neutral-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-serif font-medium mb-16">Hotels & Resorts</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Resort Exterior" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
+                <h3 class="text-lg font-serif font-medium mb-2">Coastal Resort</h3>
+                <p class="text-neutral-600 text-sm">Luxury seaside accommodation with panoramic ocean views and world-class amenities.</p>
             </div>
 
-            <!-- Contact Form -->
-            <form class="max-w-2xl mx-auto bg-brand-light p-8 rounded-lg shadow-md">
-                <div class="grid md:grid-cols-2 gap-4 mb-4">
-                    <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded focus:outline-none focus:border-brand-gold">
-                    <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded focus:outline-none focus:border-brand-gold">
-                </div>
-                <textarea placeholder="Your Message / Inquiry" rows="5" class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:border-brand-gold"></textarea>
-                <button type="submit" class="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded uppercase tracking-wider font-medium transition-custom">
-                    Send Inquiry
-                </button>
-            </form>
+            <!-- Card 2 -->
+            <div class="group">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Hotel Room" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
+                <h3 class="text-lg font-serif font-medium mb-2">Premium Suites</h3>
+                <p class="text-neutral-600 text-sm">Spacious, elegantly appointed rooms designed for ultimate comfort and relaxation.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Lobby Area" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
+                <h3 class="text-lg font-serif font-medium mb-2">Boutique Hotels</h3>
+                <p class="text-neutral-600 text-sm">Unique architectural designs blending local heritage with modern luxury standards.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-brand-gray text-white/80 py-8 text-sm">
-    <div class="container mx-auto px-4 text-center">
-        <p class="mb-2"><strong class="text-white">LAZENDA DEVELOPMENT SDN. BHD.</strong> • CIDB Reg: 1971017-LB043916 • Grade G7</p>
-        <p>© 2026 LAZENDA DEVELOPMENT SDN. BHD. All Rights Reserved. • Bright, Trusted & Compliant</p>
+<footer class="bg-black text-white py-16 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+        <div>
+            <h3 class="text-2xl font-serif font-semibold tracking-widest mb-4">LAZENDA</h3>
+            <p class="text-neutral-400 text-sm">DEVELOPMENT</p>
+        </div>
+        <div>
+            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Navigation</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Home</a></li>
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Projects</a></li>
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">About Us</a></li>
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Services</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Residential Development</a></li>
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Commercial Projects</a></li>
+                <li><a href="#" class="hover:text-neutral-300 transition-custom">Hospitality</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Contact</h4>
+            <p class="text-sm text-neutral-400 mb-2">Labuan, Malaysia</p>
+            <p class="text-sm text-neutral-400">info@lazenda.my</p>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-neutral-800 text-xs text-neutral-500">
+        © 2026 LAZENDA DEVELOPMENT. All rights reserved.
     </div>
 </footer>
 
-<!-- Interactive JS -->
+<!-- JS -->
 <script>
-    // Mobile Menu
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    // Navbar Scroll Style
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('shadow-md', window.scrollY > 50);
-        navbar.classList.toggle('bg-brand-primary/95', window.scrollY > 50);
-    });
-
-    // Smooth Scroll
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
         });
     });
 </script>
+
+<style>
+.text-shadow-sm {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
 
 </body>
 </html>
