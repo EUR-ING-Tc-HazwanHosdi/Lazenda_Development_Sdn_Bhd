@@ -9,7 +9,7 @@ COMPANY_NAME = "LAZENDA DEVELOPMENT SDN. BHD."
 CIDB_REG = "1971017-LB043916"
 GRADE = "G7"
 LOCATION = "Wilayah Persekutuan Labuan, Malaysia"
-PHONE = "+60 11-6567 6997"
+PHONE = "087-413 090"
 EMAIL = "info@lazendadev.com"
 
 # --- ROUTES ---
