@@ -13,18 +13,18 @@
                     colors: {
                         black: '#000000',
                         white: '#FFFFFF',
-                        neutral: {
-                            50: '#FAFAFA',
+                        gold: '#B89B68',
+                        dark: '#111111',
+                        gray: {
                             100: '#F5F5F5',
                             200: '#E5E5E5',
-                            300: '#D4D4D4',
-                            700: '#404040',
-                            900: '#171717',
+                            800: '#222222',
+                            900: '#1A1A1A',
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        display: ['Playfair Display', 'serif'],
                     },
                 }
             }
@@ -32,25 +32,37 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .transition-custom { transition: all 0.3s ease; }
-            .content-auto { content-visibility: auto; }
+            .transition-custom { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+            .text-shadow { text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+            .logo-text {
+                font-family: 'Inter', sans-serif;
+                font-weight: 300;
+                letter-spacing: 0.25em;
+                line-height: 1.2;
+            }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-neutral-900 font-sans">
+<body class="bg-white text-black font-sans">
 
 <!-- Navigation -->
-<nav class="absolute w-full top-0 left-0 z-50 px-6 md:px-12 py-6 flex justify-between items-center">
-    <a href="#" class="text-[clamp(1.5rem,3vw,2rem)] font-serif font-semibold tracking-widest text-black">LAZENDA<br><span class="text-[0.65rem] uppercase tracking-[0.3em] text-neutral-700">DEVELOPMENT</span></a>
+<nav class="absolute w-full top-0 left-0 z-50 px-8 md:px-16 py-8 flex justify-between items-center">
+    <!-- Custom Logo exactly like your image -->
+    <a href="#" class="flex flex-col items-center">
+        <span class="logo-text text-[clamp(1.8rem,4vw,2.5rem)] text-white font-light tracking-[0.3em]">LAZENDA</span>
+        <span class="w-[80%] h-[1px] bg-gold my-1"></span>
+        <span class="text-[0.6rem] uppercase text-gold tracking-[0.4em]">DEVELOPMENT</span>
+    </a>
+
     <div class="flex items-center gap-8">
-        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Home</a>
-        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Projects</a>
-        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">About</a>
-        <a href="#" class="text-sm text-neutral-900 hover:text-neutral-500 transition-custom">Contact</a>
-        <button class="text-lg"><i class="fa fa-bars"></i></button>
+        <a href="#" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Home</a>
+        <a href="#" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Projects</a>
+        <a href="#" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">About</a>
+        <a href="#" class="text-sm text-white/90 hover:text-gold transition-custom uppercase tracking-wider">Contact</a>
+        <button class="text-white text-lg hover:text-gold transition-custom"><i class="fa fa-bars"></i></button>
     </div>
 </nav>
 
@@ -58,25 +70,29 @@
 <section class="w-full h-screen relative overflow-hidden">
     <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
          alt="Luxury Modern Villa" class="w-full h-full object-cover">
-    <div class="absolute bottom-16 left-12 text-white">
-        <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-serif font-semibold leading-tight text-shadow-sm">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute bottom-20 left-16 md:left-24 text-white">
+        <h1 class="text-[clamp(2.8rem,6vw,5rem)] font-display font-medium leading-tight text-shadow">
             Timeless Living<br>Spaces
         </h1>
     </div>
 </section>
 
 <!-- Property Developments Section -->
-<section class="py-24 px-6 md:px-12 bg-white">
+<section class="py-28 px-8 md:px-16 bg-white">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-serif font-medium mb-16">Property Developments</h2>
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-20 relative">
+            Property Developments
+            <span class="absolute -bottom-4 left-0 w-20 h-[2px] bg-gold"></span>
+        </h2>
         
-        <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
             <div class="order-2 md:order-1">
-                <h3 class="text-[clamp(1.4rem,3vw,2rem)] font-serif font-medium mb-6">Modern Luxury Residences</h3>
-                <p class="text-neutral-700 leading-relaxed mb-8 max-w-xl">
+                <h3 class="text-[clamp(1.4rem,3vw,2rem)] font-display font-normal mb-6">Modern Luxury Residences</h3>
+                <p class="text-gray-800/80 leading-relaxed mb-8 max-w-xl">
                     Exquisitely designed homes blending contemporary architecture with natural surroundings. Each residence features premium finishes, open-plan living, and expansive outdoor areas.
                 </p>
-                <a href="#" class="inline-block border border-neutral-900 px-8 py-3 text-sm uppercase tracking-widest hover:bg-neutral-900 hover:text-white transition-custom">
+                <a href="#" class="inline-block border border-black px-10 py-4 text-sm uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-custom">
                     View Projects
                 </a>
             </div>
@@ -89,69 +105,83 @@
 </section>
 
 <!-- Hotels & Resorts Section -->
-<section class="py-24 px-6 md:px-12 bg-neutral-50">
+<section class="py-28 px-8 md:px-16 bg-gray-100">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-serif font-medium mb-16">Hotels & Resorts</h2>
+        <h2 class="text-[clamp(1.8rem,4vw,2.8rem)] font-display font-normal mb-20 relative">
+            Hotels & Resorts
+            <span class="absolute -bottom-4 left-0 w-20 h-[2px] bg-gold"></span>
+        </h2>
         
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Card 1 -->
-            <div class="group">
+            <div class="group bg-white shadow-md hover:shadow-xl transition-custom">
                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Resort Exterior" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
-                <h3 class="text-lg font-serif font-medium mb-2">Coastal Resort</h3>
-                <p class="text-neutral-600 text-sm">Luxury seaside accommodation with panoramic ocean views and world-class amenities.</p>
+                     alt="Resort Exterior" class="w-full h-64 object-cover group-hover:scale-[1.01] transition-custom">
+                <div class="p-6">
+                    <h3 class="text-lg font-display font-medium mb-2">Coastal Resort</h3>
+                    <p class="text-gray-800/70 text-sm">Luxury seaside accommodation with panoramic ocean views and world-class amenities.</p>
+                </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="group">
+            <div class="group bg-white shadow-md hover:shadow-xl transition-custom">
                 <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Hotel Room" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
-                <h3 class="text-lg font-serif font-medium mb-2">Premium Suites</h3>
-                <p class="text-neutral-600 text-sm">Spacious, elegantly appointed rooms designed for ultimate comfort and relaxation.</p>
+                     alt="Hotel Room" class="w-full h-64 object-cover group-hover:scale-[1.01] transition-custom">
+                <div class="p-6">
+                    <h3 class="text-lg font-display font-medium mb-2">Premium Suites</h3>
+                    <p class="text-gray-800/70 text-sm">Spacious, elegantly appointed rooms designed for ultimate comfort and relaxation.</p>
+                </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="group">
+            <div class="group bg-white shadow-md hover:shadow-xl transition-custom">
                 <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Lobby Area" class="w-full h-64 object-cover mb-4 group-hover:scale-[1.02] transition-custom">
-                <h3 class="text-lg font-serif font-medium mb-2">Boutique Hotels</h3>
-                <p class="text-neutral-600 text-sm">Unique architectural designs blending local heritage with modern luxury standards.</p>
+                     alt="Lobby Area" class="w-full h-64 object-cover group-hover:scale-[1.01] transition-custom">
+                <div class="p-6">
+                    <h3 class="text-lg font-display font-medium mb-2">Boutique Hotels</h3>
+                    <p class="text-gray-800/70 text-sm">Unique architectural designs blending local heritage with modern luxury standards.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-black text-white py-16 px-6 md:px-12">
+<footer class="bg-black text-white py-20 px-8 md:px-16">
     <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
         <div>
-            <h3 class="text-2xl font-serif font-semibold tracking-widest mb-4">LAZENDA</h3>
-            <p class="text-neutral-400 text-sm">DEVELOPMENT</p>
+            <!-- Logo in footer same style -->
+            <a href="#" class="flex flex-col items-start mb-4">
+                <span class="logo-text text-2xl text-white font-light tracking-[0.3em]">LAZENDA</span>
+                <span class="w-[60%] h-[1px] bg-gold my-1"></span>
+                <span class="text-[0.6rem] uppercase text-gold tracking-[0.4em]">DEVELOPMENT</span>
+            </a>
+            <p class="text-gray-400 text-sm">Exclusive developments since 1997</p>
         </div>
         <div>
-            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Navigation</h4>
+            <h4 class="text-sm uppercase tracking-[0.3em] text-gold mb-4">Navigation</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Home</a></li>
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Projects</a></li>
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">About Us</a></li>
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Contact</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Projects</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Contact</a></li>
             </ul>
         </div>
         <div>
-            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Services</h4>
+            <h4 class="text-sm uppercase tracking-[0.3em] text-gold mb-4">Services</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Residential Development</a></li>
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Commercial Projects</a></li>
-                <li><a href="#" class="hover:text-neutral-300 transition-custom">Hospitality</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Residential Development</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Commercial Projects</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-gold transition-custom">Hospitality</a></li>
             </ul>
         </div>
         <div>
-            <h4 class="text-sm uppercase tracking-widest text-neutral-400 mb-4">Contact</h4>
-            <p class="text-sm text-neutral-400 mb-2">Labuan, Malaysia</p>
-            <p class="text-sm text-neutral-400">info@lazenda.my</p>
+            <h4 class="text-sm uppercase tracking-[0.3em] text-gold mb-4">Contact</h4>
+            <p class="text-sm text-gray-300 mb-2">Wilayah Persekutuan Labuan, Malaysia</p>
+            <p class="text-sm text-gray-300">info@lazenda.my</p>
         </div>
     </div>
-    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-neutral-800 text-xs text-neutral-500">
+    <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-xs text-gray-600">
         © 2026 LAZENDA DEVELOPMENT. All rights reserved.
     </div>
 </footer>
@@ -167,12 +197,6 @@
         });
     });
 </script>
-
-<style>
-.text-shadow-sm {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-</style>
 
 </body>
 </html>
